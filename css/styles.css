@@ -733,3 +733,40 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-color: var(--Accent);
 }
+.form-text{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--dark);
+
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.imput{
+    width: 100%;
+}
+.text-area{
+    width: 100%;
+    resize: none;
+}
+.lable-text{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transform: translateY( calc(50% - 8px) );
+    background-color: tomato;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1.2px;
+    letter-spacing: 0.01em;
+    color: var(--sublte-text);
+}
+.input-form:not(:last-child){ 
+    margin-bottom: 26px;
+}
+.input-form{
+    position: relative;
+}
