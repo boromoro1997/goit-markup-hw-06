@@ -378,8 +378,8 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal is-hidden">
+    <div class="backdrop is-hiddden" data-modal>
+      <div class="modal is-hiddden">
         <button class="modal-button" data-modal-close>
           <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 0.805714L7.19429 0L4 3.19429L0.805714 0L0 0.805714L3.19429 4L0 7.19429L0.805714 8L4 4.80571L7.19429 8L8 7.19429L4.80571 4L8 0.805714Z" fill="black" />
@@ -390,27 +390,44 @@
           <div class="input-form" role="group" aria-labelledby="">
             <label class="lable">
               <span class="lable-text">Name</span>
-              <input class="imput" type="text" name="name"
-            /></label>
+              <span class="svg-input">
+                <input class="input" type="text" name="name" required placeholder=" " autofocus />
+                <svg class="icon-form" width="18px" height="18px">
+                  <use href="./images/sprite.svg#icon-person"></use>
+                </svg>
+              </span>
+            </label>
           </div>
           <div class="input-form" role="group" aria-labelledby="">
             <label class="lable">
               <span class="lable-text">Phone</span>
-              <input class="imput" type="text" name="Phone"
-            /></label>
+              <span class="svg-input">
+                <input class="input" type="tel" name="phone" placeholder=" " required />
+                <svg class="icon-form" width="18px" height="18px">
+                  <use href="./images/sprite.svg#icon-phone"></use>
+                </svg>
+              </span>
+            </label>
           </div>
           <div class="input-form" role="group" aria-labelledby="">
             <label class="lable">
               <span class="lable-text">Email</span>
-              <input class="imput" type="text" name="Email"
-            /></label>
-          </div>
-          <div class="input-form" role="group" aria-labelledby="">
-            <label class="lable">
-              <span class="lable-text">Comment</span>
-              <textarea class="text-area" name="Comment" rows="4"></textarea>
+              <span class="svg-input">
+                <input class="input" type="email" name="email" placeholder=" " required />
+                <svg class="icon-form" width="18px" height="18px">
+                  <use href="./images/sprite.svg#icon-email"></use>
+                </svg>
+              </span>
             </label>
           </div>
+          <div class="input-form" role="group" aria-labelledby="">
+            <label class="lable" for="comments">
+              <span class="lable-text">Comment</span>
+
+              <textarea name="" id="comments" class="textarea" placeholder="Text input"></textarea>
+            </label>
+          </div>
+          <button type="submit" class="modal-submit button">Send</button>
         </form>
       </div>
     </div>
