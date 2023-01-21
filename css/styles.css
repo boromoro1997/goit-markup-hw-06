@@ -360,7 +360,8 @@ body {
     border-color: var(--primary-brand);
 }
 .mainbutton.button,
-.modal-submit{
+.modal-submit,
+.footer-submit{
     color:var(--background);
     background-color: var(--primary-brand);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -378,7 +379,9 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-.mainbutton.button:active{
+.mainbutton.button:hover,
+.modal-submit:hover,
+.footer-submit:hover{
    background-color:var(--active-button);
 }
 /* TITLES */
@@ -606,11 +609,15 @@ transition: color 250ms var(--cubic-beizer), border-color 250ms var(--cubic-beiz
     display: flex;
     column-gap: 120px;
 }
-.foot-container{
+.footer-content{
     width: 264px;
 }
 .footer-sotial{
     width: 208px;
+}
+.footer-conteiner{
+    display: flex;
+    justify-content: space-between;
 }
 .link.foot-icon{
     display: flex;
@@ -715,10 +722,14 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     transform: translate(-50%, -50%) scale(1);
     background-color: var(--background);
     padding: 24px;
+    padding-top: 72px;
     transition:transform 250ms var(--cubic-beizer) ;
 }
 
 .modal-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
     display: flex;
     width: 24px;
     height: 24px;
@@ -742,8 +753,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--dark);
-
-    margin-top: 24px;
     margin-bottom: 34px;
 }
 
@@ -763,11 +772,10 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     position: absolute;
     left: 0%;
     top: 0%;
-    transform: translateY( calc(50% - 8px) );
-    background-color: tomato;
+    transform: translateY( calc(-100% - 4px) );
     font-style: normal;
     font-size: 12px;
-    line-height: 1.2px;
+    line-height: 1.2;
     letter-spacing: 0.01em;
     color: var(--sublte-text);
 }
@@ -775,10 +783,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     display: inline-block;
     position: relative;
     width: 100%;
-}
-.lable-text{
-display: inline-block;
-margin-bottom: 20px;
 }
 .input-form:not(:last-child){ 
     margin-bottom: 26px;
@@ -796,7 +800,8 @@ margin-bottom: 20px;
     outline: none;
 }
 .textarea:focus, 
-.input:focus{
+.input:focus,
+.input-footer:focus{
 border: 1px solid var(--primary-brand);
 border-radius: 4px;
 }
@@ -826,4 +831,86 @@ border-radius: 4px;
 }
 .modal-submit{
     height: 56px;
+    margin-top: 24px;
+}
+.policy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.checkbox-privacy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 1.25px solid var(--dark);
+    border-radius: 2px;
+    fill: var(--Light);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.policy-text{
+    display: flex;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    color: #757575;
+    text-align: center;
+}
+.icon-privacy{
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-policy:checked + .checkbox-privacy {
+    background-color: var(--active-button);
+    border-color: transparent;  
+}
+/* .input-policy:focus:not(:checked) + .checkbox-privacy{
+    border: 3.25px solid var(--active-button);
+} */
+.input-policy:checked + .checkbox-privacy .icon-privacy{
+    opacity: 1;
+    
+}
+.footer-submit{
+display: flex;
+align-items: center;
+justify-content: c;
+width: 165px;
+height: 40px;
+padding: 8px 24px;
+}
+.footer-submit::after{
+    content: '';
+    width: 24px;
+    height: 20px;
+    margin-left: 16px;
+    background-image: url(../images/airplane.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.footer-form{
+    display: flex;
+    column-gap: 24px;
+    margin-top: 16px ;
+}
+.input-footer{
+    width:264px;
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: var(--Light);
+}
+.input-footer::placeholder{
+    font-size: 12px;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6)
 }
