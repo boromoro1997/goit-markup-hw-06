@@ -607,7 +607,6 @@ transition: color 250ms var(--cubic-beizer), border-color 250ms var(--cubic-beiz
 }
 .footer > .container{
     display: flex;
-    column-gap: 120px;
 }
 .footer-content{
     width: 264px;
@@ -721,6 +720,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     background-color: var(--background);
+    border-radius: 4px;
     padding: 24px;
     padding-top: 72px;
     transition:transform 250ms var(--cubic-beizer) ;
@@ -743,9 +743,13 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 }
 
 .modal-button:hover {
+    color: var(--background);
+    background-color: var(--active-button);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-color: var(--Accent);
 }
+
+/* MODAL FORM STYLES */
 .form-text{
     font-weight: 600;
     font-size: 16px;
@@ -899,6 +903,7 @@ padding: 8px 24px;
 .input-footer{
     width:264px;
     height: 40px;
+    padding: 8px 16px;
     background-color: transparent;
     outline: none;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -913,4 +918,7 @@ padding: 8px 24px;
     align-items: center;
     letter-spacing: 0.04em;
     color: rgba(255, 255, 255, 0.6)
+}
+.link-policy{
+    color: var(--primary-brand);
 }
